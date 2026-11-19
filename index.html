@@ -65,10 +65,11 @@ a.lk{color:var(--accent);text-decoration:none;border-bottom:1px dotted currentCo
 a.lk::after{content:" 📍";font-size:.8em}
 .sec{font-size:13px;font-weight:700;color:var(--sub);margin:16px 4px 8px}
 header{position:relative}
-.mode{position:absolute;top:calc(14px + env(safe-area-inset-top));right:12px;display:flex;
-  background:rgba(255,255,255,.18);border-radius:999px;padding:3px}
-.mode button{border:0;background:transparent;color:#fff;font-size:12px;font-weight:600;
-  padding:5px 10px;border-radius:999px;cursor:pointer}
+.titlebar{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.titlebar h1{white-space:nowrap}
+.mode{display:flex;flex:0 0 auto;background:rgba(255,255,255,.18);border-radius:999px;padding:3px}
+.mode button{border:0;background:transparent;color:#fff;font-size:13px;font-weight:700;
+  padding:6px 12px;border-radius:999px;cursor:pointer;white-space:nowrap}
 .mode button.on{background:#fff;color:var(--accent)}
 body.m-tw .only-hk,body.m-hk .only-tw{display:none !important}
 .t-fam{background:#fdeef3;color:#b0285f}
@@ -77,8 +78,10 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 </head>
 <body>
 <header>
-  <div class="mode" id="mode"><button data-m="tw">🇹🇼 台灣出發</button><button data-m="hk">🇭🇰 香港出發</button></div>
-  <h1>❄️ 北海道</h1>
+  <div class="titlebar">
+    <h1>❄️ 北海道</h1>
+    <div class="mode" id="mode"><button data-m="tw">🇹🇼 台灣出發</button><button data-m="hk">🇭🇰 香港出發</button></div>
+  </div>
   <p class="only-tw">2027/2/17（三）– 2/24（三）· 2 大人</p>
   <p class="only-hk">2027/2/18（四）– 2/24（三）· 4 大 1 小</p>
   <div class="flights only-tw">
