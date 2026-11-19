@@ -64,16 +64,30 @@ main{padding:14px 12px calc(40px + env(safe-area-inset-bottom));max-width:640px;
 a.lk{color:var(--accent);text-decoration:none;border-bottom:1px dotted currentColor}
 a.lk::after{content:" 📍";font-size:.8em}
 .sec{font-size:13px;font-weight:700;color:var(--sub);margin:16px 4px 8px}
+header{position:relative}
+.mode{position:absolute;top:calc(14px + env(safe-area-inset-top));right:12px;display:flex;
+  background:rgba(255,255,255,.18);border-radius:999px;padding:3px}
+.mode button{border:0;background:transparent;color:#fff;font-size:12px;font-weight:600;
+  padding:5px 10px;border-radius:999px;cursor:pointer}
+.mode button.on{background:#fff;color:var(--accent)}
+body.m-tw .only-hk,body.m-hk .only-tw{display:none !important}
+.t-fam{background:#fdeef3;color:#b0285f}
 footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 </style>
 </head>
 <body>
 <header>
-  <h1>❄️ 北海道 8日7夜</h1>
-  <p>2027/2/17（三）– 2/24（三）· 2 大人</p>
-  <div class="flights">
-    <div class="flight">去程 JX318<b>台中 10:20 → 新千歲 15:00</b>2/17</div>
-    <div class="flight">回程 JX319<b>新千歲 16:00 → 台中 19:55</b>2/24</div>
+  <div class="mode" id="mode"><button data-m="tw">🇹🇼 台灣出發</button><button data-m="hk">🇭🇰 香港出發</button></div>
+  <h1>❄️ 北海道</h1>
+  <p class="only-tw">2027/2/17（三）– 2/24（三）· 2 大人</p>
+  <p class="only-hk">2027/2/18（四）– 2/24（三）· 4 大 1 小</p>
+  <div class="flights only-tw">
+    <div class="flight">去程 星宇 JX318<b>台中 10:20 → 新千歲 15:00</b>2/17</div>
+    <div class="flight">回程 星宇 JX319<b>新千歲 16:00 → 台中 19:55</b>2/24</div>
+  </div>
+  <div class="flights only-hk">
+    <div class="flight">去程 國泰<b>香港 → 新千歲</b>2/18 · 航班時間待補</div>
+    <div class="flight">回程 國泰<b>新千歲 → 香港</b>2/24 · 航班時間待補</div>
   </div>
 </header>
 
@@ -82,7 +96,7 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 <main id="main">
 
 <!-- Day 1 -->
-<section class="day" data-label="D1" data-date="2/17">
+<section class="day" data-who="tw" data-label="D1" data-date="2/17">
   <div class="dayhead"><h2>Day 1 · 抵達札幌</h2>
     <div class="meta">2/17（三）</div>
     <span class="tag t-stay">🏨 札幌（酒店待定，建議近札幌站）</span></div>
@@ -99,7 +113,7 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 </section>
 
 <!-- Day 2 -->
-<section class="day" data-label="D2" data-date="2/18">
+<section class="day" data-who="tw" data-label="D2" data-date="2/18">
   <div class="dayhead"><h2>Day 2 · 🎿 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B5%E3%83%83%E3%83%9D%E3%83%AD%E3%83%86%E3%82%A4%E3%83%8D" target="_blank" rel="noopener">Sapporo Teine</a></h2>
     <div class="meta">2/18（四）· 平日人少</div>
     <span class="tag t-ski">滑雪 ①</span><span class="tag t-stay">🏨 札幌</span></div>
@@ -107,11 +121,30 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
     <li><div class="tm">~8:00</div><div class="what"><b>市區酒店坐滑雪巴士</b><p>喺日航、京王等酒店上車，大約 9:25 到 Olympia 區（以 2025–26 季時間作參考）</p></div></li>
     <li><div class="tm">日間</div><div class="what"><b>滑雪</b><p>雪具可以喺雪場租；山頂望到札幌市同石狩灣</p></div></li>
     <li><div class="tm">16:00</div><div class="what"><b>坐巴士返市區</b><p>大約 17:10–18:10 返到酒店</p></div></li>
-    <li><div class="tm">夜晚</div><div class="what"><b><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E7%8B%B8%E5%B0%8F%E8%B7%AF%E5%95%86%E5%BA%97%E8%A1%97%20%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener">狸小路</a></b><p>藥妝、唐吉訶德</p></div></li>
+    <li><div class="tm">19:00</div><div class="what"><b>👨‍👩‍👧 全家晚餐（同香港組會合）</b><p>一共 7 位：6 大 1 小</p></div></li>
   </ul></div>
   <div class="card food"><h3>🍽 餐廳</h3>
     <div class="row"><span>雪場午餐 · ¥1,500–2,500／人</span><span class="badge b-no">唔使預約</span></div>
-    <div class="row"><span>湯咖哩／拉麵 · ¥1,500–2,000／人</span><span class="badge b-no">唔使預約（要排隊）</span></div>
+    <div class="row"><span><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B5%E3%83%83%E3%83%9D%E3%83%AD%E3%83%93%E3%83%BC%E3%83%AB%E5%9C%92" target="_blank" rel="noopener">札幌啤酒園</a> 成吉思汗（羊肉，有大枱）· 估計 ¥4,000–6,000／人</span><span class="badge b-must">必須預約 7 位</span></div>
+    <div class="row"><span>或者 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E7%84%BC%E8%82%89%E3%81%BD%E3%82%93%E3%81%8C%20%E6%9C%AD%E5%B9%8C%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE%E5%BA%97" target="_blank" rel="noopener">焼肉ぽんが 札幌すすきの店</a>（和牛，有個室套餐）· ¥10,000–20,000／人</span><span class="badge b-must">必須預約 7 位</span></div>
+  </div>
+</section>
+
+<!-- Day 2 HK -->
+<section class="day" data-who="hk" data-label="D2" data-date="2/18">
+  <div class="dayhead"><h2>Day 2 · 香港組抵達札幌</h2>
+    <div class="meta">2/18（四）</div>
+    <span class="tag t-stay">🏨 札幌（建議同台灣組住近啲）</span><span class="tag t-fam">夜晚全家會合</span></div>
+  <div class="card"><ul class="tl">
+    <li><div class="tm">待補</div><div class="what"><b>國泰航班抵達<a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF" target="_blank" rel="noopener">新千歲機場</a></b><p>入境、攞行李大約 1 個鐘</p></div></li>
+    <li><div class="tm">之後</div><div class="what"><b>JR 快速 Airport → 札幌站</b><p>大約 40 分鐘；帶住小朋友同行李，可以考慮坐機場巴士直達酒店</p></div></li>
+    <li><div class="tm">傍晚</div><div class="what"><b>Check in，休息一陣</b></div></li>
+    <li><div class="tm">有時間</div><div class="what"><b><a class="lk" href="https://www.google.com/maps/search/?api=1&query=JR%E6%9C%AD%E5%B9%8C%E9%A7%85" target="_blank" rel="noopener">札幌站</a> / <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%80%9A%E5%85%AC%E5%9C%92%20%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener">大通公園</a> 輕鬆行吓</b><p>第一日唔好排太多，小朋友唔使太攰</p></div></li>
+    <li><div class="tm">19:00</div><div class="what"><b>👨‍👩‍👧 全家晚餐（同台灣組會合）</b><p>一共 7 位：6 大 1 小</p></div></li>
+  </ul></div>
+  <div class="card food"><h3>🍽 餐廳</h3>
+    <div class="row"><span><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B5%E3%83%83%E3%83%9D%E3%83%AD%E3%83%93%E3%83%BC%E3%83%AB%E5%9C%92" target="_blank" rel="noopener">札幌啤酒園</a> 成吉思汗（羊肉，有大枱）· 估計 ¥4,000–6,000／人</span><span class="badge b-must">必須預約 7 位</span></div>
+    <div class="row"><span>或者 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E7%84%BC%E8%82%89%E3%81%BD%E3%82%93%E3%81%8C%20%E6%9C%AD%E5%B9%8C%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE%E5%BA%97" target="_blank" rel="noopener">焼肉ぽんが 札幌すすきの店</a>（和牛，有個室套餐）· ¥10,000–20,000／人</span><span class="badge b-must">必須預約 7 位</span></div>
   </div>
 </section>
 
@@ -207,7 +240,7 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 </section>
 
 <!-- Day 8 -->
-<section class="day" data-label="D8" data-date="2/24">
+<section class="day" data-who="tw" data-label="D8" data-date="2/24">
   <div class="dayhead"><h2>Day 8 · 回程</h2>
     <div class="meta">2/24（三）</div></div>
   <div class="card"><ul class="tl">
@@ -219,57 +252,95 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
   </ul></div>
 </section>
 
+<!-- Day 8 HK -->
+<section class="day" data-who="hk" data-label="D8" data-date="2/24">
+  <div class="dayhead"><h2>Day 8 · 回程</h2>
+    <div class="meta">2/24（三）</div></div>
+  <div class="card"><ul class="tl">
+    <li><div class="tm">早上</div><div class="what"><b>慢慢食早餐、補買嘢</b></div></li>
+    <li><div class="tm">起飛前 3.5 小時</div><div class="what"><b>JR 札幌 → 新千歲機場</b><p>大約 40 分鐘；國際線建議起飛前 2.5 小時到機場</p></div></li>
+    <li><div class="tm">機場</div><div class="what"><b><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E5%8C%97%E6%B5%B7%E9%81%93%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E9%81%93%E5%A0%B4%20%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF" target="_blank" rel="noopener">拉麵道場</a>食飯 · <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%AD%E3%82%A4%E3%82%BA%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%83%BC%E3%83%88%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%20%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF" target="_blank" rel="noopener">Royce 巧克力世界</a></b></div></li>
+    <li><div class="tm">待補</div><div class="what"><b>國泰航班起飛 ✈️</b><p>航班時間待補</p></div></li>
+  </ul></div>
+</section>
+
 <!-- Checklist -->
 <section class="day" data-label="✅" data-date="預約">
   <div class="dayhead"><h2>預約清單</h2>
     <div class="meta">剔咗會記住喺呢部手機</div></div>
   <div class="card check" id="check">
-    <label><input type="checkbox" data-k="c1"><span>札幌酒店（2/17–2/20 住 3 晚 + 2/22–2/24 住 2 晚）<span class="when">建議訂近札幌站嘅酒店</span></span></label>
-    <label><input type="checkbox" data-k="c2" checked><span>Tomamu The Tower（2/20–2/22）<span class="when">已訂</span></span></label>
+    <label class="only-tw"><input type="checkbox" data-k="c1"><span>札幌酒店（2/17–2/20 住 3 晚 + 2/22–2/24 住 2 晚）<span class="when">建議訂近札幌站嘅酒店</span></span></label>
+    <label class="only-hk"><input type="checkbox" data-k="h1"><span>國泰來回機票（2/18–2/24）<span class="when">訂好之後將航班時間話我知，我幫你更新</span></span></label>
+    <label class="only-hk"><input type="checkbox" data-k="h2"><span>札幌酒店（2/18–2/20 住 2 晚 + 2/22–2/24 住 2 晚）<span class="when">建議同台灣組住近啲</span></span></label>
+    <label class="only-hk"><input type="checkbox" data-k="h3"><span>Tomamu The Tower（2/20–2/22）<span class="when">台灣組已訂，香港組要另外訂</span></span></label>
+    <label><input type="checkbox" data-k="g1"><span>2/18 全家晚餐（7 位：6 大 1 小）</span></label>
+    <label class="only-tw"><input type="checkbox" data-k="c2" checked><span>Tomamu The Tower（2/20–2/22）<span class="when">已訂</span></span></label>
     <label><input type="checkbox" data-k="c3"><span>JR 札幌 ⇄ Tomamu 來回車飛<span class="when">Tomamu 站唔賣車飛，要預先買</span></span></label>
-    <label><input type="checkbox" data-k="c4"><span>D1 和牛燒肉<span class="when">出發前 1–2 個月訂</span></span></label>
+    <label class="only-tw"><input type="checkbox" data-k="c4"><span>D1 和牛燒肉<span class="when">出發前 1–2 個月訂</span></span></label>
     <label><input type="checkbox" data-k="c5"><span>D3 小樽壽司</span></label>
     <label><input type="checkbox" data-k="c6"><span>D4 Tomamu hal 晚餐</span></label>
     <label><input type="checkbox" data-k="c7"><span>D6 藻岩山山頂餐廳</span></label>
     <label><input type="checkbox" data-k="c8"><span>D7 いしざき（假期）</span></label>
-    <label><input type="checkbox" data-k="c9"><span>Teine 滑雪巴士<span class="when">2026–27 季時間表出咗再確認</span></span></label>
+    <label class="only-tw"><input type="checkbox" data-k="c9"><span>Teine 滑雪巴士<span class="when">2026–27 季時間表出咗再確認</span></span></label>
   </div>
   <div class="card note"><h3>💡 小提示</h3><ul>
     <li>Tomamu 嘅木林の湯唔係溫泉，所以成個行程都冇真正嘅溫泉</li>
     <li>2/23 係日本假期，餐廳同景點會多人</li>
+    <li>2/19 起兩組一齊行，所有餐廳要訂 7 位（6 大 1 小），訂位時記得問有冇兒童椅</li>
     <li>所有預算都係每人估計，請以官方公佈為準</li>
   </ul></div>
 </section>
 
 </main>
-<footer>📍 = 撳一下開 Google Maps · Last updated 2026/11/19</footer>
+<footer>📍 = 撳一下開 Google Maps · Last updated 2026/11/19 · 加入香港出發行程</footer>
 
 <script>
 (function(){
-  var days=[].slice.call(document.querySelectorAll('.day'));
+  var all=[].slice.call(document.querySelectorAll('.day'));
   var tabs=document.getElementById('tabs');
+  var modeBtns=[].slice.call(document.querySelectorAll('#mode button'));
+  var mode='tw', days=[], cur=0;
   function show(i){
-    days.forEach(function(d,j){d.classList.toggle('on',i===j)});
+    cur=i;
+    all.forEach(function(d){d.classList.remove('on')});
+    if(days[i]) days[i].classList.add('on');
     [].forEach.call(tabs.children,function(t,j){t.classList.toggle('on',i===j)});
     var t=tabs.children[i]; if(t&&t.scrollIntoView) t.scrollIntoView({inline:'center',block:'nearest'});
     window.scrollTo(0,0);
-    try{localStorage.setItem('hk27-tab',String(i))}catch(e){}
+    try{localStorage.setItem('hk27-tab-'+mode,String(i))}catch(e){}
   }
-  days.forEach(function(d,i){
-    var b=document.createElement('button');
-    b.className='tab';
-    b.innerHTML=d.dataset.label+'<small>'+d.dataset.date+'</small>';
-    b.onclick=function(){show(i)};
-    tabs.appendChild(b);
+  function setMode(m){
+    mode=(m==='hk')?'hk':'tw';
+    document.body.classList.remove('m-tw','m-hk');
+    document.body.classList.add('m-'+mode);
+    modeBtns.forEach(function(b){b.classList.toggle('on',b.dataset.m===mode)});
+    days=all.filter(function(d){var w=d.dataset.who;return !w||w===mode});
+    tabs.innerHTML='';
+    days.forEach(function(d,i){
+      var b=document.createElement('button');
+      b.className='tab';
+      b.innerHTML=d.dataset.label+'<small>'+d.dataset.date+'</small>';
+      b.onclick=function(){show(i)};
+      tabs.appendChild(b);
+    });
+    var start=0;
+    try{var s=localStorage.getItem('hk27-tab-'+mode); if(s!==null) start=+s;}catch(e){}
+    var now=new Date(), md=(now.getMonth()+1)+'/'+now.getDate();
+    if(now.getFullYear()===2027){
+      days.forEach(function(d,i){if(d.dataset.date===md) start=i});
+    }
+    show(Math.min(Math.max(start,0),days.length-1));
+    try{localStorage.setItem('hk27-mode',mode)}catch(e){}
+    if(location.hash!=='#'+mode){try{history.replaceState(null,'','#'+mode)}catch(e){location.hash=mode}}
+  }
+  modeBtns.forEach(function(b){b.onclick=function(){setMode(b.dataset.m)}});
+  window.addEventListener('hashchange',function(){
+    var h=location.hash.replace('#','');
+    if((h==='hk'||h==='tw')&&h!==mode) setMode(h);
   });
-  // default: today's day if within trip, else saved tab, else D1
-  var start=0;
-  try{
-    var s=localStorage.getItem('hk27-tab'); if(s!==null) start=+s;
-  }catch(e){}
-  var now=new Date(), y=now.getFullYear(), m=now.getMonth()+1, dd=now.getDate();
-  if(y===2027&&m===2&&dd>=17&&dd<=24) start=dd-17;
-  show(Math.min(Math.max(start,0),days.length-1));
+  var init=location.hash.replace('#','');
+  if(init!=='hk'&&init!=='tw'){try{init=localStorage.getItem('hk27-mode')||'tw'}catch(e){init='tw'}}
+  setMode(init);
 
   // checklist persistence
   var boxes=document.querySelectorAll('#check input');
