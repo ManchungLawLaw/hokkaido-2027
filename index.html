@@ -497,7 +497,7 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
           fr.src=placeEmbed(qr); op.href=a.href; now.textContent='📍 '+a.textContent.trim();
           [].forEach.call(day.querySelectorAll('a.lk.active'),function(x){x.classList.remove('active')});
           a.classList.add('active');
-          box.scrollIntoView({behavior:'smooth',block:'start'});
+          var nv=document.querySelector('nav'); var off=(nv?nv.offsetHeight:0)+8; window.scrollTo({top:box.getBoundingClientRect().top+window.pageYOffset-off,behavior:'smooth'});
         });
       });
       showRoute();
