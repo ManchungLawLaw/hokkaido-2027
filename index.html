@@ -67,6 +67,14 @@ a.lk::after{content:" 📍";font-size:.8em}
 .opt h3{margin:0 0 4px;font-size:15px;color:var(--accent)}
 .opt .sub{font-size:12px;color:var(--sub);margin:0 0 6px}
 .t-opt{background:#e8f1fb;color:var(--accent)}
+.mapbox{margin:0 0 12px}
+.mapframe{position:relative;border-radius:14px;overflow:hidden;background:#dfe7ef;box-shadow:0 1px 2px rgba(20,40,60,.06);aspect-ratio:16/11}
+.mapframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mapbar{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:12px}
+.mapnow{flex:1;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mapbar button,.mapbar a{border:1px solid var(--line);background:var(--card);color:var(--accent);border-radius:999px;
+  padding:5px 10px;font-size:12px;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap}
+a.lk.active{background:#fff3c4}
 .sec{font-size:13px;font-weight:700;color:var(--sub);margin:16px 4px 8px}
 header{position:relative}
 .titlebar{display:flex;align-items:center;justify-content:space-between;gap:10px}
@@ -103,15 +111,18 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 <main id="main">
 
 <!-- Day 1 -->
-<section class="day" data-who="tw" data-label="D1" data-date="2/17">
+<section class="day" data-who="tw" data-label="D1" data-date="2/17" data-route="新千歳空港|JR札幌駅|ベッセルホテルカンパーナすすきの|ふらの和牛よしうし 札幌本店">
   <div class="dayhead"><h2>Day 1 · 抵達札幌</h2>
     <div class="meta">2/17（三）</div>
-    <span class="tag t-stay">🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E8%88%B9%E8%88%B6%E8%8A%B1%E5%9C%92%E8%96%84%E9%87%8E%E9%A3%AF%E5%BA%97%20%E6%9C%AD%E5%B9%8C%20%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a>（含早餐）</span></div>
+    <span class="tag t-stay">🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a>（含早餐）</span></div>
+  <div class="mapbox"><div class="mapframe"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe></div>
+    <div class="mapbar"><span class="mapnow">🗺 全日路線</span><button type="button" class="m-route">↺ 全日路線</button><a class="m-open" target="_blank" rel="noopener">Google Maps 開 ↗</a></div></div>
+  <div class="card"><h3 style="margin:0 0 6px;font-size:14px">🏨 札幌酒店：<a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a></h3><p style="margin:0;font-size:13px;color:var(--sub)">日文名：ベッセルホテルカンパーナすすきの<br>地址：札幌市中央區南 5 條西 6 丁目 16-1<br>交通：地鐵南北線薄野站行 4 分鐘；路面電車「資生館小学校前」站就喺附近<br>Check in 14:00 · Check out 11:00 · 早餐 6:00 開始 · 有大浴場</p></div>
   <div class="card"><ul class="tl">
     <li><div class="tm">15:00</div><div class="what"><b>抵達<a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF" target="_blank" rel="noopener">新千歲機場</a></b><p>入境、攞行李大約 1 個鐘</p></div></li>
     <li><div class="tm">16:15</div><div class="what"><b>JR 快速 Airport → 札幌站</b><p>大約 40 分鐘</p></div></li>
     <li><div class="tm">17:10</div><div class="what"><b>地鐵南北線 札幌站 → 薄野站</b><p>2 個站，出站行 4 分鐘到酒店；行李多可以喺札幌站坐的士，大約 10 分鐘</p></div></li>
-    <li><div class="tm">17:30</div><div class="what"><b>Check in <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E8%88%B9%E8%88%B6%E8%8A%B1%E5%9C%92%E8%96%84%E9%87%8E%E9%A3%AF%E5%BA%97%20%E6%9C%AD%E5%B9%8C%20%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a></b><p>酒店有大浴場，可以浸吓解攰</p></div></li>
+    <li><div class="tm">17:30</div><div class="what"><b>Check in <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a></b><p>酒店有大浴場，可以浸吓解攰</p></div></li>
     <li><div class="tm">19:00</div><div class="what"><b>和牛燒肉晚餐（<a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE%20%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener">薄野</a>）</b></div></li>
   </ul></div>
   <div class="card food"><h3>🍽 餐廳</h3>
@@ -121,12 +132,14 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 </section>
 
 <!-- Day 2 -->
-<section class="day" data-who="tw" data-label="D2" data-date="2/18">
+<section class="day" data-who="tw" data-label="D2" data-date="2/18" data-route="ベッセルホテルカンパーナすすきの|札幌エクセルホテル東急|サッポロテイネ|サッポロビール園|ベッセルホテルカンパーナすすきの">
   <div class="dayhead"><h2>Day 2 · 🎿 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B5%E3%83%83%E3%83%9D%E3%83%AD%E3%83%86%E3%82%A4%E3%83%8D" target="_blank" rel="noopener">Sapporo Teine</a></h2>
     <div class="meta">2/18（四）· 平日人少</div>
-    <span class="tag t-ski">滑雪 ①</span><span class="tag t-stay">🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E8%88%B9%E8%88%B6%E8%8A%B1%E5%9C%92%E8%96%84%E9%87%8E%E9%A3%AF%E5%BA%97%20%E6%9C%AD%E5%B9%8C%20%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a>（含早餐）</span></div>
+    <span class="tag t-ski">滑雪 ①</span><span class="tag t-stay">🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a>（含早餐）</span></div>
+  <div class="mapbox"><div class="mapframe"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe></div>
+    <div class="mapbar"><span class="mapnow">🗺 全日路線</span><button type="button" class="m-route">↺ 全日路線</button><a class="m-open" target="_blank" rel="noopener">Google Maps 開 ↗</a></div></div>
   <div class="card"><ul class="tl">
-    <li><div class="tm">7:30</div><div class="what"><b>酒店早餐</b><p>Buffet 6:00 開始</p></div></li>
+    <li><div class="tm">7:15</div><div class="what"><b>🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a> 早餐</b><p>Buffet 6:00 開始；食完行去札幌エクセルホテル東急坐滑雪巴士</p></div></li>
     <li><div class="tm">~7:55</div><div class="what"><b>坐滑雪巴士</b><p>薄野一帶嘅上車點係<a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E6%9C%AD%E5%B9%8C%E3%82%A8%E3%82%AF%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%B1%E6%80%A5" target="_blank" rel="noopener">札幌エクセルホテル東急</a>，大約 7:55 上車（以 2025–26 季時間表作參考），出發前要確認今季上車點同時間</p></div></li>
     <li><div class="tm">日間</div><div class="what"><b>滑雪</b><p>雪具可以喺雪場租；山頂望到札幌市同石狩灣</p></div></li>
     <li><div class="tm">16:00</div><div class="what"><b>坐巴士返市區</b><p>大約 17:10–18:10 返到酒店</p></div></li>
@@ -141,15 +154,18 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 </section>
 
 <!-- Day 2 HK -->
-<section class="day" data-who="hk" data-label="D2" data-date="2/18">
+<section class="day" data-who="hk" data-label="D2" data-date="2/18" data-route="新千歳空港|JR札幌駅|ベッセルホテルカンパーナすすきの|サッポロビール園">
   <div class="dayhead"><h2>Day 2 · 香港組抵達札幌</h2>
     <div class="meta">2/18（四）</div>
-    <span class="tag t-stay">🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E8%88%B9%E8%88%B6%E8%8A%B1%E5%9C%92%E8%96%84%E9%87%8E%E9%A3%AF%E5%BA%97%20%E6%9C%AD%E5%B9%8C%20%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a>（含早餐）</span><span class="tag t-fam">夜晚全家會合</span></div>
+    <span class="tag t-stay">🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a>（含早餐）</span><span class="tag t-fam">夜晚全家會合</span></div>
+  <div class="mapbox"><div class="mapframe"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe></div>
+    <div class="mapbar"><span class="mapnow">🗺 全日路線</span><button type="button" class="m-route">↺ 全日路線</button><a class="m-open" target="_blank" rel="noopener">Google Maps 開 ↗</a></div></div>
+  <div class="card"><h3 style="margin:0 0 6px;font-size:14px">🏨 札幌酒店：<a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a></h3><p style="margin:0;font-size:13px;color:var(--sub)">日文名：ベッセルホテルカンパーナすすきの<br>地址：札幌市中央區南 5 條西 6 丁目 16-1<br>交通：地鐵南北線薄野站行 4 分鐘；路面電車「資生館小学校前」站就喺附近<br>Check in 14:00 · Check out 11:00 · 早餐 6:00 開始 · 有大浴場</p></div>
   <div class="card"><ul class="tl">
     <li><div class="tm">~15:55</div><div class="what"><b>CX584 抵達<a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF" target="_blank" rel="noopener">新千歲機場</a></b><p>入境、攞行李大約 1 個鐘</p></div></li>
     <li><div class="tm">~17:00</div><div class="what"><b>JR 快速 Airport → 札幌站</b><p>大約 40 分鐘，最快；大約 17:00 上車，17:40 到札幌站</p></div></li>
     <li><div class="tm">~17:45</div><div class="what"><b>札幌站 → 薄野</b><p>坐的士大約 10 分鐘，7 個人加行李最方便；或者坐地鐵南北線 2 個站</p></div></li>
-    <li><div class="tm">~18:00</div><div class="what"><b>Check in <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E8%88%B9%E8%88%B6%E8%8A%B1%E5%9C%92%E8%96%84%E9%87%8E%E9%A3%AF%E5%BA%97%20%E6%9C%AD%E5%B9%8C%20%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a></b><p>兩組住同一間酒店，放低行李就去食晚飯</p></div></li>
+    <li><div class="tm">~18:00</div><div class="what"><b>Check in <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a></b><p>兩組住同一間酒店，放低行李就去食晚飯</p></div></li>
     <li><div class="tm">19:00</div><div class="what"><b>👨‍👩‍👧 全家晚餐（同台灣組會合）</b><p>一共 7 位：6 大 1 小</p></div></li>
   </ul></div>
   <div class="card food"><h3>🍽 餐廳</h3>
@@ -160,11 +176,15 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 </section>
 
 <!-- Day 3 -->
-<section class="day" data-label="D3" data-date="2/19">
+<section class="day" data-label="D3" data-date="2/19" data-route="ベッセルホテルカンパーナすすきの|JR札幌駅|小樽駅|おたる水族館|小樽 寿司屋通り|小樽運河|小樽 堺町通り|小樽駅|耀い KAGAYOI 大通BISSE|ベッセルホテルカンパーナすすきの">
   <div class="dayhead"><h2>Day 3 · 小樽水族館 + 運河</h2>
     <div class="meta">2/19（五）· 全家一齊</div>
-    <span class="tag t-stay">🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E8%88%B9%E8%88%B6%E8%8A%B1%E5%9C%92%E8%96%84%E9%87%8E%E9%A3%AF%E5%BA%97%20%E6%9C%AD%E5%B9%8C%20%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a>（含早餐）</span></div>
+    <span class="tag t-stay">🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a>（含早餐）</span></div>
+  <div class="mapbox"><div class="mapframe"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe></div>
+    <div class="mapbar"><span class="mapnow">🗺 全日路線</span><button type="button" class="m-route">↺ 全日路線</button><a class="m-open" target="_blank" rel="noopener">Google Maps 開 ↗</a></div></div>
   <div class="card"><ul class="tl">
+    <li><div class="tm">8:00</div><div class="what"><b>🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a> 早餐</b><p>Buffet 6:00 開始，有三文魚子同蟹等北海道海鮮</p></div></li>
+    <li><div class="tm">9:00</div><div class="what"><b>出發</b><p>行去薄野站（大約 4 分鐘），坐地鐵南北線去札幌站（2 個站）；7 個人都可以坐兩架的士</p></div></li>
     <li><div class="tm">9:30</div><div class="what"><b>JR 札幌 → 小樽</b><p>大約 40 分鐘</p></div></li>
     <li><div class="tm">10:15</div><div class="what"><b>小樽站 → 水族館</b><p>7 個人分兩架的士，或者預約 Jumbo 的士，大約 20 分鐘；坐巴士都得（10 號或 11 號車）</p></div></li>
     <li><div class="tm">10:45</div><div class="what"><b><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%81%8A%E3%81%9F%E3%82%8B%E6%B0%B4%E6%97%8F%E9%A4%A8" target="_blank" rel="noopener">🐧 小樽水族館</a></b><p>冬季營業到 2027/2/23，開放時間 10:00–16:00（最後入館 15:30）。冬天有企鵝雪中散步同室內海豚表演，表演時間要喺官網查</p></div></li>
@@ -187,11 +207,15 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 </section>
 
 <!-- Day 4 -->
-<section class="day" data-label="D4" data-date="2/20">
+<section class="day" data-label="D4" data-date="2/20" data-route="ベッセルホテルカンパーナすすきの|JR札幌駅|トマム駅|星野リゾート トマム ザ・タワー|星野リゾート トマム アイスヴィレッジ">
   <div class="dayhead"><h2>Day 4 · 札幌 → Tomamu</h2>
     <div class="meta">2/20（六）</div>
     <span class="tag t-stay">🏨 Tomamu The Tower</span><span class="tag t-ski">滑雪 ②（半日）</span></div>
+  <div class="mapbox"><div class="mapframe"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe></div>
+    <div class="mapbar"><span class="mapnow">🗺 全日路線</span><button type="button" class="m-route">↺ 全日路線</button><a class="m-open" target="_blank" rel="noopener">Google Maps 開 ↗</a></div></div>
   <div class="card"><ul class="tl">
+    <li><div class="tm">8:00</div><div class="what"><b>🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a> 早餐</b><p>Buffet 6:00 開始，有三文魚子同蟹等北海道海鮮</p></div></li>
+    <li><div class="tm">9:30</div><div class="what"><b>出發</b><p>退房，坐的士去札幌站（大約 10 分鐘，有行李最方便）</p></div></li>
     <li><div class="tm">上午</div><div class="what"><b>JR 特急 札幌 → <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%88%E3%83%9E%E3%83%A0%E9%A7%85" target="_blank" rel="noopener">Tomamu 站</a></b><p>大約 1 小時 40 分到 2 小時，班次少，要預先睇時間表。或者坐 Resort Liner 巴士直達酒店（大約 2 個鐘）</p></div></li>
     <li><div class="tm">到站</div><div class="what"><b>免費接駁巴士去 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E6%98%9F%E9%87%8E%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88%20%E3%83%88%E3%83%9E%E3%83%A0%20%E3%82%B6%E3%83%BB%E3%82%BF%E3%83%AF%E3%83%BC" target="_blank" rel="noopener">The Tower</a></b><p>大約 5 分鐘，唔使預約，配合火車到站時間開車</p></div></li>
     <li><div class="tm">下晝</div><div class="what"><b>分組玩</b><p>🎿 大人：滑半日雪<br>👵🧒 老人家同小朋友：去 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%9F%E3%83%8A%E3%83%9F%E3%83%8A%E3%83%93%E3%83%BC%E3%83%81%20%E3%83%88%E3%83%9E%E3%83%A0" target="_blank" rel="noopener">Mina-Mina Beach</a> 室內浪池（室內好暖，有幼兒池）</p></div></li>
@@ -208,10 +232,12 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 </section>
 
 <!-- Day 5 -->
-<section class="day" data-label="D5" data-date="2/21">
+<section class="day" data-label="D5" data-date="2/21" data-route="星野リゾート トマム ザ・タワー|霧氷テラス トマム|ミナミナビーチ トマム|星野リゾート トマム アイスヴィレッジ|星野リゾート トマム ザ・タワー">
   <div class="dayhead"><h2>Day 5 · 🎿 Tomamu 全日（分組玩）</h2>
     <div class="meta">2/21（日）</div>
     <span class="tag t-ski">滑雪 ②</span><span class="tag t-stay">🏨 Tomamu The Tower</span></div>
+  <div class="mapbox"><div class="mapframe"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe></div>
+    <div class="mapbar"><span class="mapnow">🗺 全日路線</span><button type="button" class="m-route">↺ 全日路線</button><a class="m-open" target="_blank" rel="noopener">Google Maps 開 ↗</a></div></div>
   <div class="card"><ul class="tl">
     <li><div class="tm">早上</div><div class="what"><b>全家：<a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E9%9C%A7%E6%B0%B7%E3%83%86%E3%83%A9%E3%82%B9%20%E3%83%88%E3%83%9E%E3%83%A0" target="_blank" rel="noopener">霧冰平台（霧氷テラス）</a></b><p>坐纜車上山，老人家都上得；天氣好可以影到結滿霜嘅霧冰，記得着厚啲</p></div></li>
     <li><div class="tm">10:00</div><div class="what"><b>分組玩</b><p>🎿 大人：全日滑雪<br>👵🧒 老人家同小朋友：Adventure Mountain（邊滑邊完成任務，上季 9:00–16:00 開放）或者小朋友滑雪班；之後返 Mina-Mina Beach 浪池</p></div></li>
@@ -234,10 +260,12 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 </section>
 
 <!-- Day 6 -->
-<section class="day" data-label="D6" data-date="2/22">
+<section class="day" data-label="D6" data-date="2/22" data-route="星野リゾート トマム ザ・タワー|トマム駅|JR札幌駅|スープカレー GARAKU sitatte sapporo|もいわ山ロープウェイ|ベッセルホテルカンパーナすすきの">
   <div class="dayhead"><h2>Day 6 · Tomamu → 札幌</h2>
     <div class="meta">2/22（一）</div>
-    <span class="tag t-stay">🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E8%88%B9%E8%88%B6%E8%8A%B1%E5%9C%92%E8%96%84%E9%87%8E%E9%A3%AF%E5%BA%97%20%E6%9C%AD%E5%B9%8C%20%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a>（含早餐）</span><span class="tag t-opt">🥩 可選：富良野くまげら</span></div>
+    <span class="tag t-stay">🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a>（含早餐）</span><span class="tag t-opt">🥩 可選：富良野くまげら</span></div>
+  <div class="mapbox"><div class="mapframe"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe></div>
+    <div class="mapbar"><span class="mapnow">🗺 全日路線</span><button type="button" class="m-route">↺ 全日路線</button><a class="m-open" target="_blank" rel="noopener">Google Maps 開 ↗</a></div></div>
   <div class="sec">方案 A：直接返札幌（原定）</div>
   <div class="card"><ul class="tl">
     <li><div class="tm">早上</div><div class="what"><b>滑多半日，或者慢慢食早餐、休息</b></div></li>
@@ -268,13 +296,16 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 </section>
 
 <!-- Day 7 -->
-<section class="day" data-label="D7" data-date="2/23">
+<section class="day" data-label="D7" data-date="2/23" data-route="ベッセルホテルカンパーナすすきの|二条市場 札幌|大通公園 札幌|札幌市時計台|白い恋人パーク|大丸札幌店|狸小路商店街 札幌|ステーキ&amp;ワイン いしざき 本店 札幌|ベッセルホテルカンパーナすすきの">
   <div class="dayhead"><h2>Day 7 · 札幌市區 + Shopping</h2>
     <div class="meta">2/23（二）</div>
-    <span class="tag t-hol">🇯🇵 日本假期（天皇誕生日）</span><span class="tag t-stay">🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E8%88%B9%E8%88%B6%E8%8A%B1%E5%9C%92%E8%96%84%E9%87%8E%E9%A3%AF%E5%BA%97%20%E6%9C%AD%E5%B9%8C%20%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a>（含早餐）</span><span class="tag t-opt">⛷ 可選：滝野 Snow World</span></div>
+    <span class="tag t-hol">🇯🇵 日本假期（天皇誕生日）</span><span class="tag t-stay">🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a>（含早餐）</span><span class="tag t-opt">⛷ 可選：滝野 Snow World</span></div>
+  <div class="mapbox"><div class="mapframe"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe></div>
+    <div class="mapbar"><span class="mapnow">🗺 全日路線</span><button type="button" class="m-route">↺ 全日路線</button><a class="m-open" target="_blank" rel="noopener">Google Maps 開 ↗</a></div></div>
   <div class="sec">方案 A：市區觀光（原定）</div>
   <div class="card"><ul class="tl">
-    <li><div class="tm">8:00</div><div class="what"><b>酒店早餐</b><p>慢慢食，有海鮮</p></div></li>
+    <li><div class="tm">8:00</div><div class="what"><b>🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a> 早餐</b><p>Buffet 6:00 開始，有三文魚子同蟹等北海道海鮮</p></div></li>
+    <li><div class="tm">9:45</div><div class="what"><b>出發</b><p>行去二條市場大約 15 分鐘，或者坐的士 5 分鐘</p></div></li>
     <li><div class="tm">10:00</div><div class="what"><b><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E6%9D%A1%E5%B8%82%E5%A0%B4%20%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener">二條市場</a></b><p>已經食咗酒店早餐，可以喺市場試吓海鮮小食，或者買啲生果</p></div></li>
     <li><div class="tm">11:30</div><div class="what"><b><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%80%9A%E5%85%AC%E5%9C%92%20%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener">大通公園</a> · <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E3%83%86%E3%83%AC%E3%83%93%E5%A1%94" target="_blank" rel="noopener">電視塔</a> · <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E6%9C%AD%E5%B9%8C%E5%B8%82%E6%99%82%E8%A8%88%E5%8F%B0" target="_blank" rel="noopener">時計台</a></b></div></li>
     <li><div class="tm">13:30</div><div class="what"><b><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E7%99%BD%E3%81%84%E6%81%8B%E4%BA%BA%E3%83%91%E3%83%BC%E3%82%AF" target="_blank" rel="noopener">白色戀人公園</a></b><p>坐地鐵東西線去</p></div></li>
@@ -303,11 +334,14 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 </section>
 
 <!-- Day 8 -->
-<section class="day" data-who="tw" data-label="D8" data-date="2/24">
+<section class="day" data-who="tw" data-label="D8" data-date="2/24" data-route="ベッセルホテルカンパーナすすきの|JR札幌駅|新千歳空港">
   <div class="dayhead"><h2>Day 8 · 回程</h2>
     <div class="meta">2/24（三）</div></div>
+  <div class="mapbox"><div class="mapframe"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe></div>
+    <div class="mapbar"><span class="mapnow">🗺 全日路線</span><button type="button" class="m-route">↺ 全日路線</button><a class="m-open" target="_blank" rel="noopener">Google Maps 開 ↗</a></div></div>
   <div class="card"><ul class="tl">
-    <li><div class="tm">早上</div><div class="what"><b>慢慢食早餐、補買嘢</b></div></li>
+    <li><div class="tm">8:00</div><div class="what"><b>🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a> 早餐</b><p>Buffet 6:00 開始，有三文魚子同蟹等北海道海鮮</p></div></li>
+    <li><div class="tm">9:30</div><div class="what"><b>出發</b><p>喺薄野、狸小路補買嘢，11:00 前返酒店退房</p></div></li>
     <li><div class="tm">11:00</div><div class="what"><b>退房 → 地鐵去札幌站</b><p>薄野站坐南北線，2 個站；行李多可以坐的士</p></div></li>
     <li><div class="tm">11:30</div><div class="what"><b>JR 札幌 → 新千歲機場</b><p>大約 40 分鐘</p></div></li>
     <li><div class="tm">12:15</div><div class="what"><b><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E5%8C%97%E6%B5%B7%E9%81%93%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E9%81%93%E5%A0%B4%20%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF" target="_blank" rel="noopener">拉麵道場</a>食午餐 · <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%AD%E3%82%A4%E3%82%BA%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%83%BC%E3%83%88%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%20%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF" target="_blank" rel="noopener">Royce 巧克力世界</a></b></div></li>
@@ -317,11 +351,14 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 </section>
 
 <!-- Day 8 HK -->
-<section class="day" data-who="hk" data-label="D8" data-date="2/24">
+<section class="day" data-who="hk" data-label="D8" data-date="2/24" data-route="ベッセルホテルカンパーナすすきの|JR札幌駅|新千歳空港">
   <div class="dayhead"><h2>Day 8 · 回程</h2>
     <div class="meta">2/24（三）</div></div>
+  <div class="mapbox"><div class="mapframe"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe></div>
+    <div class="mapbar"><span class="mapnow">🗺 全日路線</span><button type="button" class="m-route">↺ 全日路線</button><a class="m-open" target="_blank" rel="noopener">Google Maps 開 ↗</a></div></div>
   <div class="card"><ul class="tl">
-    <li><div class="tm">早上</div><div class="what"><b>慢慢食早餐、補買嘢</b><p>台灣組大約 11:30 先走</p></div></li>
+    <li><div class="tm">8:00</div><div class="what"><b>🏨 <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%83%9B%E3%83%86%E3%83%AB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%BC%E3%83%8A%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE" target="_blank" rel="noopener">船舶花園薄野飯店</a> 早餐</b><p>Buffet 6:00 開始，有三文魚子同蟹等北海道海鮮</p></div></li>
+    <li><div class="tm">9:30</div><div class="what"><b>出發</b><p>喺薄野、狸小路補買嘢；台灣組大約 11:00 先走</p></div></li>
     <li><div class="tm">~12:00</div><div class="what"><b>退房，去札幌站附近食午餐</b><p>薄野站坐地鐵 2 個站；行李可以寄存喺酒店或者札幌站嘅儲物櫃</p></div></li>
     <li><div class="tm">~13:45</div><div class="what"><b>JR 札幌 → 新千歲機場</b><p>大約 40 分鐘；國際線建議起飛前 2.5 小時到機場</p></div></li>
     <li><div class="tm">~14:30</div><div class="what"><b><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E5%8C%97%E6%B5%B7%E9%81%93%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E9%81%93%E5%A0%B4%20%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF" target="_blank" rel="noopener">拉麵道場</a>食飯 · <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%83%AD%E3%82%A4%E3%82%BA%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%83%BC%E3%83%88%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%20%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF" target="_blank" rel="noopener">Royce 巧克力世界</a></b></div></li>
@@ -409,6 +446,47 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
   var init=location.hash.replace('#','');
   if(init!=='hk'&&init!=='tw'){try{init=localStorage.getItem('hk27-mode')||'tw'}catch(e){init='tw'}}
   setMode(init);
+
+  // ---- maps ----
+  var E=encodeURIComponent;
+  function routeEmbed(st){
+    var url='https://maps.google.com/maps?saddr='+E(st[0])+'&daddr='+st.slice(1).map(E).join('+to:')+'&output=embed';
+    return url;
+  }
+  function routeOpen(st){
+    var u='https://www.google.com/maps/dir/?api=1&origin='+E(st[0])+'&destination='+E(st[st.length-1]);
+    if(st.length>2) u+='&waypoints='+st.slice(1,-1).map(E).join('%7C');
+    return u;
+  }
+  function placeEmbed(qr){return 'https://maps.google.com/maps?q='+E(qr)+'&z=16&output=embed';}
+  function initMap(day){
+    var box=day.querySelector('.mapbox'); if(!box) return;
+    var st=(day.dataset.route||'').split('|').filter(Boolean);
+    var fr=box.querySelector('iframe'), now=box.querySelector('.mapnow'), op=box.querySelector('.m-open');
+    function showRoute(){
+      fr.src=routeEmbed(st); op.href=routeOpen(st); now.textContent='🗺 全日路線（'+st.length+' 個點）';
+      [].forEach.call(day.querySelectorAll('a.lk.active'),function(a){a.classList.remove('active')});
+    }
+    if(!box.dataset.init){
+      box.dataset.init='1';
+      box.querySelector('.m-route').onclick=showRoute;
+      [].forEach.call(day.querySelectorAll('a.lk'),function(a){
+        a.addEventListener('click',function(ev){
+          ev.preventDefault();
+          var qr='';
+          try{qr=new URL(a.href).searchParams.get('query')||a.textContent}catch(e){qr=a.textContent}
+          fr.src=placeEmbed(qr); op.href=a.href; now.textContent='📍 '+a.textContent.trim();
+          [].forEach.call(day.querySelectorAll('a.lk.active'),function(x){x.classList.remove('active')});
+          a.classList.add('active');
+          box.scrollIntoView({behavior:'smooth',block:'start'});
+        });
+      });
+      showRoute();
+    }
+  }
+  var _show=show;
+  show=function(i){_show(i); if(days[i]) initMap(days[i]);};
+  if(days[cur]) initMap(days[cur]);
 
   // checklist persistence
   var boxes=document.querySelectorAll('#check input');
