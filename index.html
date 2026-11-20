@@ -63,6 +63,10 @@ main{padding:14px 12px calc(40px + env(safe-area-inset-bottom));max-width:640px;
 .check input:checked + span{color:var(--sub);text-decoration:line-through}
 a.lk{color:var(--accent);text-decoration:none;border-bottom:1px dotted currentColor}
 a.lk::after{content:" 📍";font-size:.8em}
+.opt{border:2px dashed #7aa6d6;background:#f7fbff}
+.opt h3{margin:0 0 4px;font-size:15px;color:var(--accent)}
+.opt .sub{font-size:12px;color:var(--sub);margin:0 0 6px}
+.t-opt{background:#e8f1fb;color:var(--accent)}
 .sec{font-size:13px;font-weight:700;color:var(--sub);margin:16px 4px 8px}
 header{position:relative}
 .titlebar{display:flex;align-items:center;justify-content:space-between;gap:10px}
@@ -242,7 +246,8 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
 <section class="day" data-label="D7" data-date="2/23">
   <div class="dayhead"><h2>Day 7 · 札幌市區 + Shopping</h2>
     <div class="meta">2/23（二）</div>
-    <span class="tag t-hol">🇯🇵 日本假期（天皇誕生日）</span><span class="tag t-stay">🏨 札幌</span></div>
+    <span class="tag t-hol">🇯🇵 日本假期（天皇誕生日）</span><span class="tag t-stay">🏨 札幌</span><span class="tag t-opt">⛷ 可選：滝野 Snow World</span></div>
+  <div class="sec">方案 A：市區觀光（原定）</div>
   <div class="card"><ul class="tl">
     <li><div class="tm">10:00</div><div class="what"><b><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E6%9D%A1%E5%B8%82%E5%A0%B4%20%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener">二條市場</a></b><p>食海鮮丼早午餐</p></div></li>
     <li><div class="tm">11:30</div><div class="what"><b><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%80%9A%E5%85%AC%E5%9C%92%20%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener">大通公園</a> · <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E3%83%86%E3%83%AC%E3%83%93%E5%A1%94" target="_blank" rel="noopener">電視塔</a> · <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E6%9C%AD%E5%B9%8C%E5%B8%82%E6%99%82%E8%A8%88%E5%8F%B0" target="_blank" rel="noopener">時計台</a></b></div></li>
@@ -250,9 +255,24 @@ footer{font-size:11px;color:var(--sub);text-align:center;padding:10px}
     <li><div class="tm">16:00</div><div class="what"><b>Shopping</b><p><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E4%B8%B8%E6%9C%AD%E5%B9%8C%E5%BA%97" target="_blank" rel="noopener">大丸</a>、<a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E6%9C%AD%E5%B9%8C%E3%82%B9%E3%83%86%E3%83%A9%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9" target="_blank" rel="noopener">Stellar Place</a>、<a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E7%8B%B8%E5%B0%8F%E8%B7%AF%E5%95%86%E5%BA%97%E8%A1%97%20%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener">狸小路</a></p></div></li>
     <li><div class="tm">19:00</div><div class="what"><b>最後一晚和牛晚餐</b></div></li>
   </ul></div>
+  <div class="sec">方案 B（可選）：細路想再玩雪</div>
+  <div class="card opt"><h3>⛄ <a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E5%9B%BD%E5%96%B6%E6%BB%9D%E9%87%8E%E3%81%99%E3%81%9A%E3%82%89%E3%82%93%E4%B8%98%E9%99%B5%E5%85%AC%E5%9C%92%20%E6%9D%B1%E5%8F%A3" target="_blank" rel="noopener">滝野 Snow World</a></h3>
+    <p class="sub">喺國營滝野鈴蘭丘陵公園入面，免費入場，好啱細路同第一次玩雪嘅人。用嚟代替方案 A 上晝嘅行程</p>
+    <ul class="tl">
+      <li><div class="tm">9:30</div><div class="what"><b>出發去滝野</b><p>坐 Jumbo 的士最方便，大約 40 分鐘；或者坐地鐵南北線去真駒內站，再轉中央巴士喺「すずらん公園東口」落車，大約 1 個鐘</p></div></li>
+      <li><div class="tm">10:30</div><div class="what"><b>玩雪</b><p>有國內最大級、長 200 米嘅雪胎滑道，免費玩，大人細路一齊玩都得；上季開放時間 9:00–16:00，雪道 9:15–15:30。老人家可以喺休息室等，入面暖，有細路玩嘅空間同輕食</p></div></li>
+      <li><div class="tm">12:30</div><div class="what"><b>園內 Country House 食午餐</b></div></li>
+      <li><div class="tm">13:30</div><div class="what"><b>返市區</b><p>大約 15:00 返到，跟住接返方案 A 嘅 Shopping 同晚餐；二條市場、大通公園同白色戀人公園就要揀其中一樣或者唔去</p></div></li>
+    </ul>
+    <div class="note" style="border:0;background:none;padding:0;margin-top:6px"><ul>
+      <li>園內大部分地方只收現金，記得帶夠日圓</li>
+      <li>今季開放時間要再確認：上季由 12/23 開到 3/31，期間冇休息日</li>
+      <li>2/23 係日本假期，人會比較多</li>
+    </ul></div>
+  </div>
   <div class="card food"><h3>🍽 餐廳</h3>
     <div class="row"><span><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E6%9D%A1%E5%B8%82%E5%A0%B4%20%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener">二條市場海鮮丼</a> · ¥3,000–5,000／人</span><span class="badge b-no">唔使預約</span></div>
-    <div class="row"><span><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%26%E3%83%AF%E3%82%A4%E3%83%B3%20%E3%81%84%E3%81%97%E3%81%96%E3%81%8D%20%E6%9C%AC%E5%BA%97%20%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener">ステーキ&amp;ワイン いしざき</a>「堪能」套餐 · ¥16,500</span><span class="badge b-must">必須預約</span></div>
+    <div class="row"><span><a class="lk" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%26%E3%83%AF%E3%82%A4%E3%83%B3%20%E3%81%84%E3%81%97%E3%81%96%E3%81%8D%20%E6%9C%AC%E5%BA%97%20%E6%9C%AD%E5%B9%8C" target="_blank" rel="noopener">ステーキ&amp;ワイン いしざき</a>「堪能」套餐 · ¥16,500</span><span class="badge b-must">必須預約 7 位</span></div>
   </div>
 </section>
 
